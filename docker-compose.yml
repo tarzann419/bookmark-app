@@ -1,0 +1,16 @@
+version: '2.20'
+
+services:
+  dev-db:
+    image: postgres:16
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: 123
+      POSTGRES_DB: nest
+    networks:
+      - bookmarkTest
+
+networks:
+  bookmarkTest:
